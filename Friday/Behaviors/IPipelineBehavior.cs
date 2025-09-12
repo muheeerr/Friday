@@ -1,9 +1,9 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Infrastructure.FridayMediator.Abstractions;
+using Friday.Abstractions;
 
-namespace Infrastructure.FridayMediator.Behaviors;
+namespace Friday.Behaviors;
 
 public interface IPipelineBehavior<in TRequest, TResponse>
     where TRequest : IRequest<TResponse>

@@ -1,8 +1,8 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Infrastructure.FridayMediator.Abstractions;
+using Friday.Abstractions;
 
-namespace Infrastructure.FridayMediator.Samples;
+namespace Friday.Samples;
 
 public record PingRequest : IRequest<Result>
 {

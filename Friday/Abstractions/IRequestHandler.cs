@@ -1,8 +1,7 @@
-
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Infrastructure.FridayMediator.Abstractions;
+namespace Friday.Abstractions;
 
 public interface IRequestHandler<in TRequest, TResponse>
     where TRequest : IRequest<TResponse>
