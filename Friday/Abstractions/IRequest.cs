@@ -1,3 +1,3 @@
-namespace Infrastructure.FridayMediator.Abstractions;
+namespace Friday.Abstractions;
 
 public interface IRequest<out TResponse>;

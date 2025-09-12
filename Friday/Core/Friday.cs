@@ -5,12 +5,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
-using Infrastructure.FridayMediator.Abstractions;
-using Infrastructure.FridayMediator.Behaviors;
+using Friday.Abstractions;
+using Friday.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Infrastructure.FridayMediator.Core;
+namespace Friday.Core;
 
 //Mediator is a design pattern that allows for decoupling of components in a system by using a central hub to manage communication between them. Mediator's name is derived from the Latin word "mediator," which means "one who mediates or intervenes." In software design, the Mediator pattern is used to reduce dependencies between components, making it easier to maintain and extend the system. The pattern promotes loose coupling by allowing components to communicate through a mediator object rather than directly with each other. This can lead to a more organized and manageable codebase, especially in complex systems with many interacting components. It is named after Friday inspired by Tony Stark's AI assistant after Jarvis.
 public interface IFriday

@@ -1,11 +1,11 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using Infrastructure.FridayMediator.Abstractions;
+using Friday.Abstractions;
 using Infrastructure.FridayMediator.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Infrastructure.FridayMediator.Core;
+namespace Friday.Core;
 
 public static class ServiceCollectionExtensions
 {
