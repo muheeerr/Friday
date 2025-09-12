@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using System.Reflection;
 using Friday.Abstractions;
-using Infrastructure.FridayMediator.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Friday.Core;
