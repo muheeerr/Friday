@@ -1,8 +1,6 @@
-using System.Threading;
-using System.Threading.Tasks;
 using Friday.Abstractions;
 
-namespace Friday.Samples;
+namespace Friday.Api.Samples;
 
 public record PingRequest : IRequest<Result>
 {
