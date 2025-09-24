@@ -11,7 +11,7 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddFriday(this IServiceCollection services, params Assembly[] assemblies)
     {
-        services.AddScoped<IFriday, Friday>();
+        services.AddTransient<IFriday, Friday>();
 
         var handlerTypes = assemblies.Length > 0
             ? assemblies.SelectMany(a => a.GetTypes())
@@ -30,7 +30,7 @@ public static class ServiceCollectionExtensions
             foreach (var handlerInterface in handlerInterfaces)
             {
                 Console.WriteLine("Adding Scoped: {0} with {1}", handlerInterface, type);
-                services.AddScoped(handlerInterface, type);
+                services.AddTransient(handlerInterface, type);
             }
 
             // Register pipeline behaviors (open generics)
@@ -43,7 +43,7 @@ public static class ServiceCollectionExtensions
                 var implementationType = type.IsGenericType ? type.GetGenericTypeDefinition() : type;
 
                 Console.WriteLine("Adding Scoped: {0} with {1}", serviceType, implementationType);
-                services.AddScoped(serviceType, implementationType);
+                services.AddTransient(serviceType, implementationType);
             }
         }
 

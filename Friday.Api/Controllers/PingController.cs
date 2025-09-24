@@ -10,18 +10,16 @@ namespace Friday.Api.Controllers;
 public class PingController : ControllerBase
 {
     private readonly IFriday _friday;
-    private readonly IAbc _ac;
-
-    public PingController(IFriday friday, IAbc ac)
+    
+    public PingController(IFriday friday)
     {
         _friday = friday;
-        _ac = ac;
     }
 
     [HttpGet]
     public async Task<IActionResult> Get()
     {
-       var a = _ac.Abc();
+       // var a = _ac.Abc();
         var response = await _friday.Send(new PingRequest { Message = "From Controller" });
         return Ok(response);
     }

@@ -8,13 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Register Friday and scan current assembly and referenced Friday project
 builder.Services.AddFriday(typeof(Program).Assembly);
 
-builder.Services.AddScoped<Abc>();
 
 var app = builder.Build();                                                                       
 
-app.MapGet("/ping", async (IFriday friday, Abc ac) =>
+app.MapGet("/ping", async (IFriday friday) =>
 {
-    var message = ac.Abc();
     var result = await friday.Send(new PingRequest { Message = "    " });
     return Results.Ok(result);
 });
